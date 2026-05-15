@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Noor Mahal Dining</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <header class="header">
+      <div class="brand">
+        <div class="mark">
+          <img src="assets/noor-mahal-dining.png" alt="Noor Mahal Dining logo" />
+        </div>
+        <div>
+          <h1>Noor Mahal Dining</h1>
+          <p>A Palace of Taste & Elegance</p>
+        </div>
+      </div>
+      <div class="controls">
+        <label>Table <input id="table" value="T-01" /></label>
+        <label>Customer <input id="customer" placeholder="Walk-in" /></label>
+        <label>Order Type
+          <select id="order">
+            <option>Dine In</option>
+            <option>Take Away</option>
+            <option>Delivery</option>
+            <option>Online Order</option>
+            <option>Party Order</option>
+          </select>
+        </label>
+        <label>Order No. <input id="orderNo" value="ORD-1001" /></label>
+      </div>
+    </header>
+
+    <section class="menu">
+      <div class="toolbar">
+        <input id="search" placeholder="Search paneer, biryani, dosa, coffee, mocktail..." />
+        <select id="type">
+          <option value="all">All</option>
+          <option>Veg</option>
+          <option>Non-Veg</option>
+          <option>Cafe</option>
+          <option>Wine</option>
+        </select>
+      </div>
+      <div id="tabs" class="tabs"></div>
+      <div class="stats">
+        <div><strong id="visible">0</strong><span>Visible</span></div>
+        <div><strong id="qty">0</strong><span>Cart Qty</span></div>
+        <div><strong id="cat">All</strong><span>Category</span></div>
+        <div><strong id="avg">Rs. 0</strong><span>Avg Price</span></div>
+      </div>
+      <div id="grid" class="grid"></div>
+    </section>
+
+    <aside class="bill">
+      <div class="bill-title">
+        <div>
+          <h2>Live Bill</h2>
+          <p id="meta"></p>
+        </div>
+        <p id="inv"></p>
+      </div>
+      <div id="cart" class="cart"></div>
+      <div class="bill-controls">
+        <label>Discount % <input id="disc" type="number" value="0" min="0" /></label>
+        <label>Service % <input id="svc" type="number" value="5" min="0" /></label>
+        <label>GST % <input id="gstRate" type="number" value="5" min="0" /></label>
+        <label>Payment
+          <select id="pay">
+            <option>Cash</option>
+            <option>UPI</option>
+            <option>Card</option>
+            <option>Wallet</option>
+          </select>
+        </label>
+      </div>
+      <div class="totals">
+        <div><span>Subtotal</span><strong id="subt">Rs. 0</strong></div>
+        <div><span>Discount</span><strong id="discAmt">-Rs. 0</strong></div>
+        <div><span>Service</span><strong id="svcAmt">Rs. 0</strong></div>
+        <div><span>GST</span><strong id="gstAmt">Rs. 0</strong></div>
+        <div class="grand"><span>Grand Total</span><strong id="grand">Rs. 0</strong></div>
+      </div>
+      <div class="actions">
+        <button id="clear">Clear</button>
+        <button id="print">Print Invoice</button>
+      </div>
+      <p class="thanks">Thank you. Visit again.</p>
+    </aside>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
